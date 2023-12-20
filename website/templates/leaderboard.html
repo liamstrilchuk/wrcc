@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block head %}
+	<script src="{{ url_for('static', filename='leaderboard.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+	<div style="display: flex; justify-content: center; flex-direction: column; text-align: center;">
+		<h1>Leaderboard</h1>
+		<div id="leaderboardContainer" style="display: flex; justify-content: center;"></div>
+	</div>
+{% endblock %}

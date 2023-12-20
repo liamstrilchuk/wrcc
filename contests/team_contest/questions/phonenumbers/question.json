@@ -1,0 +1,26 @@
+{
+	"name": "Phone Numbers",
+	"short_name": "phonenumbers",
+	"content": "You really need to contact your friend but unfortunately they don't have Instagram or Snapchat, and instead they use an antiquated device called a \"telephone\". You wrote down their phone number at one point, but now it's lost among many other phone numbers. You need to filter through the phone numbers to find your friend's number. Fortunately, you know a few things about their phone number that will allow you to find it.",
+	"input": "The first line of input will consist of two integers: n, the number of phone numbers, and r, the number of rules (1 ≤ n ≤ 1000, 0 ≤ r ≤ 15). The following n lines will each contain a phone number in the format ddd-ddd-dddd, where each d is a digit. The following r lines will each contain a rule that your friend's phone number follows. Each rule will be one of the following formats:<pre>there is no 3\nthere is a 3 at position 4\nthere is no 3 at position 4</pre>",
+	"output": "Output your friend's phone number. If there are multiple possible numbers, output the number of possible numbers.",
+	"test_cases": [
+		{
+			"input": "tc1.in",
+			"output": "tc1.out",
+			"percent_value": 0
+		},
+		{
+			"input": "tc2.in",
+			"output": "tc2.out",
+			"percent_value": 100
+		}
+	],
+	"sample_test_cases": [
+		{
+			"input": "3 2\n123-456-7777\n987-555-3210\n842-683-4414\nthere is no 1 at position 0\nthere is no 9",
+			"output": "842-683-4914"
+		}
+	],
+	"point_value": 7
+}

@@ -1,0 +1,10 @@
+{
+	"name": "Individual Contest",
+	"questions": [
+		"gofish",
+		"tictactoe",
+		"fridaythe13th",
+		"tetris",
+		"halloween"
+	]
+}

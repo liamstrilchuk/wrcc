@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block body %}
+	<a href="/" id="backToContest">&larr; Back to main page</a>
+	{% if team %}
+		<h1>Team name: {{ team.name }}</h1>
+		<p>You have the following users in your team:</p>
+		<ul>
+			{% for user in users %}
+				<li>{{ user.username }}</li>
+			{% endfor %}
+		</ul>
+	{% else %}
+		<p>You are not currently assigned to a team.</p>
+	{% endif %}
+	<p>If these details are not correct, please <a href="mailto:liam.strilchuk@gmail.com">email the contest organizers</a> as soon as possible.</p>
+{% endblock %}

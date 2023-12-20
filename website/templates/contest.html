@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block head %}
+	<script src="{{ url_for('static', filename='contest.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+	<a href="/" id="backToContest">&larr; Back to main page</a>
+	<h1 id="contestName"></h1>
+	<div id="questionContainer"></div>
+{% endblock %}

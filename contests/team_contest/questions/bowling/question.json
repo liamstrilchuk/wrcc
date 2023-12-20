@@ -1,0 +1,26 @@
+{
+	"content": "Given the velocity of a bowling ball and the position of some pins, calculate the total number of pins that the bowling ball will knock down. Discard any possible interactions where pins may hit other pins. There will be no cases of the ball just barely \"skimming\" a pin.",
+	"input": "The first line contains five positive integers: the number of pins N, the radius of the ball R, the radius of each pin r (all the pins have the same radius), the horizontal velocity of the ball v<sub>x</sub>, and the vertical velocity of the ball v<sub>y</sub>. The next n lines contain two integers each: the x and y coordinates of one of the pins. For this problem, assume that pins can overlap in some places. The ball always starts at the origin (0, 0).",
+	"short_name": "bowling",
+	"name": "Bowling",
+	"output": "Output a single integer: the total number of pins the ball touches.",
+	"test_cases": [
+		{
+			"input": "tc1.in",
+			"output": "tc1.out",
+			"percent_value": 0
+		},
+		{
+			"input": "tc2.in",
+			"output": "tc2.out",
+			"percent_value": 100
+		}
+	],
+	"sample_test_cases": [
+		{
+			"input": "4 2 1 1 1\n1 1\n2 1\n3 50\n5 8",
+			"output": "3"
+		}
+	],
+	"point_value": 7
+}

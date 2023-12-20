@@ -1,0 +1,31 @@
+{
+	"name": "Escaping the Labyrinth",
+	"short_name": "escaping_the_labyrinth",
+	"content": "Oh no! You've taken a wrong turn and now you're stuck in a maze. Thankfully, someone has left a map on the wall! Now all you have to do is figure out how long it'll take you to get out.",
+	"input": "The first line of input consists of two integers x and y (5 ≤ x ≤ 51, 5 ≤ y ≤ 51). The following y lines each consist of x characters. Each character will be a wall (#) or an open space (.).",
+	"output": "The output should consist of one integer: the minimum number of moves required to reach the end of the maze (the bottom-right corner) from the start (the top-left corner). Moves can be left, right, up, or down (no diagonals).",
+	"test_cases": [
+		{
+			"input": "tc1.in",
+			"output": "tc1.out",
+			"percent_value": 0
+		},
+		{
+			"input": "tc2.in",
+			"output": "tc2.out",
+			"percent_value": 0
+		},
+		{
+			"input": "tc3.in",
+			"output": "tc3.out",
+			"percent_value": 100
+		}
+	],
+	"sample_test_cases": [
+		{
+			"input": "11 11\n.##########\n..#.#.#...#\n#.#.#.#.#.#\n#.#.#...#.#\n#.#.#.#.#.#\n#.#.#.#.#.#\n#.#.#.#.#.#\n#.#...#.#.#\n#.###.###.#\n#.....#...#\n#########..",
+			"output": "36"
+		}
+	],
+	"point_value": 15
+}

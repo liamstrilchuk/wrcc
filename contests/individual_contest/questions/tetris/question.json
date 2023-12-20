@@ -1,0 +1,26 @@
+{
+	"name": "Tetris",
+	"short_name": "tetris",
+	"content": "Tetris is a game in which a grid is filled up with geometric shapes (called \"tetriminos\") which fall from the top of the screen. Tetriminos can be rotated and horizontally moved, and when a row is completely filled up, it is removed and the player gains points. Your task is to determine, given the current game grid, the maximum number of lines that can be completed by placing one tetrimino (the type is given in the input).<br><br>The seven types of tetriminos are:<pre>T:    S:    Z:    L:    J:    O:    I:\n #     ##   ##      #   #     ##    ####\n###   ##     ##   ###   ###   ##</pre>Each of these pieces may be rotated; in total, there are 19 distinct arrangements (4 for T, L, and J; 2 for S, Z, and I; and 1 for O). Assume that the tetromino is dropped from the top of the grid; they cannot be placed under already occupied spaces.",
+	"input": "The first line of input will consist of one integer, t, the number of test cases (1 ≤ t ≤ 50). For each test case, the first line will consist of two integers, w and h (5 ≤ w, h ≤ 25), the width and height of the grid, along with a character representing the type of tetrimino to be placed. Each of the following h lines will contain w characters, with a . representing an empty space and a # representing an occupied space.",
+	"output": "For each test case, output one integer: the maximum number of lines that can be completed by placing the given tetrimino. If the tetrimino cannot be fully placed on the grid, output 0.",
+	"test_cases": [
+		{
+			"input": "tc1.in",
+			"output": "tc1.out",
+			"percent_value": 0
+		},
+		{
+			"input": "tc2.in",
+			"output": "tc2.out",
+			"percent_value": 100
+		}
+	],
+	"sample_test_cases": [
+		{
+			"input": "2\n8 8 T\n........\n........\n........\n....#...\n....##..\n#...##.#\n#..#####\n#.##.###\n10 6 L\n..........\n..........\n.#........\n#......#..\n#....####.\n#.########",
+			"output": "1\n0"
+		}
+	],
+	"point_value": 10
+}

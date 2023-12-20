@@ -1,0 +1,31 @@
+{
+	"name": "Space Battle",
+	"short_name": "space_battle",
+	"content": "As the commander of the USS Enterprise, you must protect Earth from a fleet of enemy ships approaching. You must determine how to destroy as many enemy ships as possible.<br>Each ship has a health, damage, and weapons reload time. A ship is destroyed when its health reaches zero. Assume that your weapons recharge before each battle, and that both ships fire immediately when a battle starts. ",
+	"input": "The first line of input consists of four integers, t, h, d, and r. t is the number of enemy spaceships (1 ≤ t ≤ 1000), h is your ship's health, d is your ship's damage, and r is your ship's reload time in seconds (1 ≤ h ≤ 1000, 1 ≤ d ≤ 1000, 1 ≤ r ≤ 100). The following t lines each consist of three integers: the enemy ship's health, damage, and reload time respectively.",
+	"output": "Output the maximum number of ships that you can destroy before your ship is destroyed.",
+	"test_cases": [
+		{
+			"input": "tc1.in",
+			"output": "tc1.out",
+			"percent_value": 0
+		},
+		{
+			"input": "tc2.in",
+			"output": "tc2.out",
+			"percent_value": 0
+		},
+		{
+			"input": "tc3.in",
+			"output": "tc3.out",
+			"percent_value": 100
+		}
+	],
+	"sample_test_cases": [
+		{
+			"input": "5 340 50 10\n150 100 15\n200 20 5\n100 30 7\n300 50 9\n120 60 12",
+			"output": "3"
+		}
+	],
+	"point_value": 7
+}

@@ -1,0 +1,21 @@
+{
+	"name": "Airport Security",
+	"short_name": "airportsecurity",
+	"content": "You work for an airport as a security guard. York work consists of checking passports and calculating ticket prices, which you find very boring. You have decided that instead of working, you will create a computer program to do your work for you.<br><br>Each passport consists of six pieces of information, each of which has a two-character id:<pre>id: identification\nby: birth year\niy: issue year\ney: expiration year\nht: height\ncd: credit</pre>There is also some information about their ticket:<pre>cl: flight class\nbw: baggage weight</pre>Each of these fields must meet certain requirements to be valid:<ul><li><code>identification</code> must be a 12-character string consisting only of numbers and letters.</li><li><code>birth year</code> must be less than or equal to the issue year.</li><li><code>issue year</code> must be before the expiration year, and must be less than or equal to 2023.</li><li><code>expiration year</code> must be greater than or equal to 2023, and can be no more than 15 years after the issue year.</li><li><code>height</code> can be in two formats: <code>xcm</code>, where x is an integer, or <code>xftyin</code>, where x and y are integers and y ≤ 11. If the height is in centimeters, it must be less than or equal to 250cm. If it is in feet and inches, it must be less than or equal to 8ft. (a foot is equal to 12 inches.)</li><li><code>credit</code> is an integer, and is the amount of money the customer has on their account. It is deduced from the ticket price to calculate the final cost. The final cost cannot be below 0.</li><li><code>flight class</code> is either <code>\"first\"</code>, <code>\"business\"</code>, or <code>\"economy\"</code>. The prices for each of these tickets are $1000, $500, and $250 respectively.</li><li><code>baggage weight</code> is in the format <code>xkg</code>, where x is an integer. Each kilogram adds $10 to the ticket price. A passenger may not bring more than 100kg onto the plane under any circumstance.</li></ul>",
+	"input": "The first line of input consists of one integer, n, the number of passengers. The following 8n lines each contain one piece of information in the format described above (see the sample test cases for an example).",
+	"output": "For each passenger, output <code>NO</code> (all uppercase) if they are not allowed to fly, and the amount of money they will be charged otherwise.",
+	"test_cases": [
+		{
+			"input": "tc1.in",
+			"output": "tc1.out",
+			"percent_value": 100
+		}
+	],
+	"sample_test_cases": [
+		{
+			"input": "1\nid: passenger123\nby: 1964\niy: 2019\ney: 2026\nht: 190cm\ncd: 40\ncl: business\nbw: 24kg",
+			"output": "700"
+		}
+	],
+	"point_value": 10
+}

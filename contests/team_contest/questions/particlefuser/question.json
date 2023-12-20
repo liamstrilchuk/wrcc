@@ -1,0 +1,31 @@
+{
+	"name": "Particle Fuser",
+	"short_name": "particlefuser",
+	"content": "Ronak has just perfected his latest build of particle fuser 3000, an incredible device that allows him to fuse together atomic nuclei at record efficiency. The device works in a way that first starts out with a few particles scattered through a vacuum one atom high—and then the particles are moved at constant velocity through the vacuum until two of them hit. When the atoms hit, they will create a small explosion, fusing together into a larger particle and releasing some energy—at this point, all the other atoms will be retracted and reused in subsequent explosions.<br><br>However, Ronak realizes that there is a small problem. He needs to open the hatch at the exact instant that the particles explode in order to harvest the energy from the explosion before it quickly turns into heat a few milliseconds later. Thus, he needs you to help him pinpoint exactly when collisions will occur in order to know when to open the hatch. The fuser has a length of x and a width of y, with a particle being initially placed in some starting point and having a velocity in a given direction.<br><br>Your job is to locate when the first instance of two particles colliding on an integer multiple of one millisecond will occur—since the hatch must be programmed to open in advance and the input for it to be opened must be entered in milliseconds. Any particle that leaves the vacuum is discarded and no longer capable of colliding with other particles in the future.",
+	"input": "The first line will consist of three integers: x, y, and n. x and y are the length and width of the container and n is the number of particles (1 ≤ x, y ≤ 10<sup>5</sup>, 2 ≤ n ≤ 10<sup>2</sup>).<br><br>The next n lines will each have four integers: x<sub>a</sub>, y<sub>a</sub>, v<sub>x</sub>, and v<sub>y</sub>. x<sub>a</sub> and y<sub>a</sub> are its starting x and y coordinates respectively, and vx and vy are its starting x and y velocity components respectively. Positive x is to the right and positive y is downward. The top left corner has coordinates (1, 1). All particles start at different coordinates.",
+	"output": "The output will consist of one integer: the number of milliseconds until two particles collide. Note that the first collision will always occur on an integer multiple of one millisecond. If no two particles touch within the first 1000 milliseconds, output <code>no reaction</code> (all lowercase).",
+	"test_cases": [
+		{
+			"input": "tc1.in",
+			"output": "tc1.out",
+			"percent_value": 0
+		},
+		{
+			"input": "tc2.in",
+			"output": "tc2.out",
+			"percent_value": 0
+		},
+		{
+			"input": "tc3.in",
+			"output": "tc3.out",
+			"percent_value": 100
+		}
+	],
+	"sample_test_cases": [
+		{
+			"input": "8 8 7\n1 2 2 1\n1 8 0 -1\n5 5 -1 2\n6 2 0 1\n7 2 0 1\n7 8 -1 -2\n8 1 -2 7",
+			"output": "2"
+		}
+	],
+	"point_value": 7
+}

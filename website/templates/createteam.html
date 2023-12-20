@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block body %}
+	<a href="/manage" id="backToContest">&larr; Back to admin management</a>
+	<form method="post">
+		<label for="teamname">Team name</label><br>
+		<input type="text" name="teamname" placeholder="Enter team name"><br>
+		<input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+		<button type="submit">Submit</button>
+	</form>
+{% endblock %}

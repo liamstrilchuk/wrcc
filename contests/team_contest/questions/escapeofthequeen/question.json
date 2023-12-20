@@ -1,0 +1,31 @@
+{
+	"name": "Escape of the Queen",
+	"short_name": "escapeofthequeen",
+	"content": "You're currently playing a game of chess (quite literally, because you're the queen piece). The player controlling you has made a lot of blunders so far and your fate is looking grim. However, you spot a chance to escape the chessboard and now you're stuck in a separate grid, one that contains walls. Each move, you can move either horizontally, vertically, or diagonally with as much distance as you want (granted there are no walls blocking your path). Given a grid, find the least number of moves you need to escape.",
+	"input": "The first line of input will consist of two integers: the width of the board, w, and the height of the board, h (2 ≤ w, h ≤ 30). The next h lines will contain w characters each, with each of these characters being a square on the board. Empty spaces are marked with a . and walls are marked with a #.",
+	"output": "Output a single integer: the minimum number of moves needed to reach the bottom right square.",
+	"test_cases": [
+		{
+			"input": "tc1.in",
+			"output": "tc1.out",
+			"percent_value": 0
+		},
+		{
+			"input": "tc2.in",
+			"output": "tc2.out",
+			"percent_value": 0
+		},
+		{
+			"input": "tc3.in",
+			"output": "tc3.out",
+			"percent_value": 100
+		}
+	],
+	"sample_test_cases": [
+		{
+			"input": "10 5\n.#.#..#.#.\n..##..#...\n#..#....#.\n..#....#..\n#..##.###.",
+			"output": "4"
+		}
+	],
+	"point_value": 12
+}

@@ -1,0 +1,31 @@
+{
+	"content": "Given a grid where each cell is a digit from 0-9, and a number of transformations applied to it, your task is to determine the original grid. The top-left of the grid has the position (0, 0). There are three possible types of transformations:<ul><li>Rotation: this instruction consists of a coordinate (x, y), size, and number of quarter-rotations. For example, take this transformation:<pre>rotate 0 0 3 1\nstart:  after:\n1230    7410\n4560    8520\n7890    9630\n0000    0000</pre>This rotates the 3x3 square with its top-left corner at (0,0) by one quarter-rotation (90°).</li><li>Translation: this instruction consists of two integers: the horizontal and vertical translations. For example:<pre>translate 3 1\nstart:  after:\n1230    0000\n4560    2301\n7890    5604\n0000    8907</pre></li><li>Mutation: this instruction consists of five integers x<sub>1</sub>, y<sub>1</sub>, x<sub>2</sub>, y<sub>2</sub>, and n, which form a rectangle between the points (x<sub>1</sub>, y<sub>1</sub>) and (x<sub>2</sub>, y<sub>2</sub>), inclusive. Each cell in the rectangle has its value incremented by n. If a cell's new value is greater than 9, it wraps back around to 0 (eg. 14 becomes 4). For example:<pre>mutate 1 1 3 2 9\nstart:  after:\n1230    1230\n4560    4459\n7890    7789\n0000    0000</pre></li></ul>",
+	"short_name": "transformations",
+	"name": "Transformations",
+	"input": "The first line of input consists of three integers: n, the number of transformations applied to the grid; w, the width of the grid; and h, the height of the grid (1 ≤ n ≤ 50, 4 ≤ w ≤ 20, 4 ≤ h ≤ 20). Each of the following h lines contains w characters, with each character representing a cell in the grid. The following n lines each contain a transformation which was applied to the grid, from first to last. Each transformation is in one of the formats described above.",
+	"output": "Output the original grid, before the transformations were applied.",
+	"test_cases": [
+		{
+			"input": "tc1.in",
+			"output": "tc1.out",
+			"percent_value": 0
+		},
+		{
+			"input": "tc2.in",
+			"output": "tc2.out",
+			"percent_value": 0
+		},
+		{
+			"input": "tc3.in",
+			"output": "tc3.out",
+			"percent_value": 100
+		}
+	],
+	"sample_test_cases": [
+		{
+			"input": "3 4 4\n3297\n1630\n9418\n2856\nrotate 1 1 2 1\nmutate 1 0 2 3 6\ntranslate 2 2",
+			"output": "1234\n5678\n9012\n3456"
+		}
+	],
+	"point_value": 12
+}

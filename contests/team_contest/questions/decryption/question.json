@@ -1,0 +1,26 @@
+{
+        "name": "Decryption",
+        "short_name": "decryption",
+        "content": "You enter a room with a number of signs written in a language that you don't understand. Upon closer inspection, you discover that the signs were written in English, but a Caesar cipher was used to encode the text. You need to decode each of the signs to travel to the next room.<br><br>A Caesar cipher works by shifting each letter by a certain number of characters. For example, if the shift is equal to 2, A would become C, E would become G, Z would become B, etc.",
+        "input": "The first line of input contains two integers, t and n (1 ≤ t ≤ 1000, 1 ≤ n). t is the number of signs, and n is the number of characters the text was shifted by. The following t lines each contain encrypted text. The text will only contain lowercase letters and spaces.",
+        "output": "For each sign, output the original text.",
+        "test_cases": [
+                {
+                        "input": "tc1.in",
+                        "output": "tc1.out",
+                        "percent_value": 0
+                },
+                {
+                        "input": "tc2.in",
+                        "output": "tc2.out",
+                        "percent_value": 100
+                }
+        ],
+        "sample_test_cases": [
+                {
+                        "input": "2 2\njgnnq yqtnf\ncocbkpi vgzv",
+                        "output": "hello world\namazing text"
+                }
+        ],
+        "point_value": 5
+}

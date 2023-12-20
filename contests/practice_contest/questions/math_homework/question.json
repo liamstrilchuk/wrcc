@@ -1,0 +1,31 @@
+{
+	"name": "Math Homework",
+	"short_name": "math_homework",
+	"content": "You've been assigned a number of math problems by your teacher. However, they're pretty hard and you don't want to do them! Instead, you create a program to solve the problems for you. There are a few new operations in your homework:<ul><li>< means to take the first number, divide it by two, and multiply it by three times the second number. For example, 5<6 = 2.5*18 = 45.</li><li>> means to take the first number, add 6, and divide it by the second number. For example, 5>6 = 11/6.</li><li>~ means to take the square of the first number, and add the second number. For example, 5~6 = 25+6 = 31.</li></ul>For each operation, after computing the result, round down to the nearest integer (so 11/6 would become 1). All of these operations have the same precedence (order of operations).",
+	"input": "The first line of input will consist of one integer, t, the number of problems (1 ≤ t ≤ 100). Each following line will contain a math problem to solve. For 3 points, there is only one operation per problem, no brackets, and all numbers are less than 10. For another 3 points, there are no brackets. It is guaranteed that there is a solution for all problems and each solution ≤ 10^9.",
+	"output": "For each problem, solve and output the result.",
+	"test_cases": [
+		{
+			"input": "tc1.in",
+			"output": "tc1.out",
+			"percent_value": 30
+		},
+		{
+			"input": "tc2.in",
+			"output": "tc2.out",
+			"percent_value": 30
+		},
+		{
+			"input": "tc3.in",
+			"output": "tc3.out",
+			"percent_value": 40
+		}
+	],
+	"sample_test_cases": [
+		{
+			"input": "4\n8~4\n5~(6<7)\n8>3~10\n12<(7~8>10)",
+			"output": "68\n88\n26\n108"
+		}
+	],
+	"point_value": 10
+}

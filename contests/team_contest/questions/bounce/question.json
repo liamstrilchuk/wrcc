@@ -1,0 +1,31 @@
+{
+	"name": "Bounce",
+	"short_name": "bounce",
+	"content": "A two-dimensional shape is made up of a number of vertices. A ball bounces around inside the shape. You know the ball's position and velocity. The magnitude of the ball's velocity never changes. If the angle between the ball's velocity and a line segment in the shape is x, the ball will bounce back at an angle of 180° - x. Assume the ball never hits a corner. Determine the number of collisions the ball experiences within the amount of time given.",
+	"input": "The first line of input consists of six integers: n, the number of vertices; p<sub>x</sub> and p<sub>y</sub>, the initial position of the ball; v<sub>x</sub> and v<sub>y</sub>, the velocity of the ball per second; and t, the number of seconds. The following n lines each contain two integers, x and y, the horizontal and vertical positions of each vertex in counterclockwise order. Each vertex is connected to the vertices directly above and below it, with the last vertex and the first vertex being connected as well. The number of vertices is ≤ 50 and t ≤ 104. All other inputs are ≥ -106 and ≤ 106.",
+	"output": "Output one integer: the number of collisions the ball experiences in the first t seconds. It is guaranteed that the number of collisions does not exceed 10<sup>4</sup>.",
+	"test_cases": [
+		{
+			"input": "tc1.in",
+			"output": "tc1.out",
+			"percent_value": 0
+		},
+		{
+			"input": "tc2.in",
+			"output": "tc2.out",
+			"percent_value": 0
+		},
+		{
+			"input": "tc3.in",
+			"output": "tc3.out",
+			"percent_value": 100
+		}
+	],
+	"sample_test_cases": [
+		{
+			"input": "5 0 0 2 1 21\n4 0\n3 4\n-2 0\n-1 -3\n1 -3",
+			"output": "12"
+		}
+	],
+	"point_value": 18
+}

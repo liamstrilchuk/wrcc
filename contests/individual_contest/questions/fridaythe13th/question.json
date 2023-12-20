@@ -1,0 +1,26 @@
+{
+        "name": "Friday the 13th",
+        "short_name": "fridaythe13th",
+        "content": "Given two dates, determine the number of Friday the 13ths between them, inclusive. Leap years are included; in a leap year, an extra day is added to February. The rules for which years are leap years are:<ul><li>Every year that is a multiple of four, except</li><li>Every year that is a multiple of one hundred, except</li><li>Every year that is a multiple of four hundred.</li></ul>For example, the year 1900 would not be a leap year, but 2000 would because it is a multiple of four hundred.<br><br>The number of days in each month is:<ul><li>January, March, May, July, August, October, December: 31 days</li><li>April, June, September, November: 30 days</li><li>February: 28 days, except on leap years</li></ul>",
+        "input": "The input will consist of two lines, each of which contains a date in the format Weekday, Month DD, YYYY. The year will be at least 1000, and the dates will be no more than 500 years apart.",
+        "output": "Output one number: the number of Friday the 13ths between the two dates, inclusive.",
+        "test_cases": [
+                {
+                        "input": "tc1.in",
+                        "output": "tc1.out",
+                        "percent_value": 0
+                },
+                {
+                        "input": "tc2.in",
+                        "output": "tc2.out",
+                        "percent_value": 100
+                }
+        ],
+        "sample_test_cases": [
+                {
+                        "input": "Sunday, September 3, 1606\nFriday, February 7, 1913",
+                        "output": "529"
+                }
+        ],
+        "point_value": 7
+}

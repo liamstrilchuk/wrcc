@@ -1,0 +1,31 @@
+{
+	"name": "Scrambled Keys",
+	"short_name": "scrambledkeys",
+	"content": "Ronak guards his secret money stash using a combination of many keys. He noticed that the number of keys was equal to the number of friends he had so he gave each friend one key, with the promise that when he needed the keys the friends would all give the keys back to him to unlock the stash. However, it’s been a long time since Ronak distributed the keys and he changed his system to only require one specific key… but that key is in the hands of one of his friends. Oh no!<br><br>Ronak needs to figure out which friend has his key in order to be able to retrieve the money he stored. Although he does not know precisely who has this key, he can use other information with the process of elimination to find the person who has the key he needs. He numbers his friends 1 to N and his keys 1 to N as well. He needs to figure out the number of the friend that holds key M, the key he needs.",
+	"input": "The first line will consist of three integers: N, M, and k. N is the number of friends Ronak has, M is the key number that he needs, and k is the number of lines that follow (1 ≤ N, M, k ≤ 100).<br><br>The next k lines each contain a message in one of the following formats:<pre>Friend x has key z\nFriend x does not have key z\nNeither friend x nor friend y have key z</pre>",
+	"output": "The output will consist of one integer: the number of the person who holds key M. It is guaranteed that there is exactly one possible solution for each problem.",
+	"test_cases": [
+		{
+			"input": "tc1.in",
+			"output": "tc1.out",
+			"percent_value": 0
+		},
+		{
+			"input": "tc2.in",
+			"output": "tc2.out",
+			"percent_value": 0
+		},
+		{
+			"input": "tc3.in",
+			"output": "tc3.out",
+			"percent_value": 100
+		}
+	],
+	"sample_test_cases": [
+		{
+			"input": "4 2 3\nNeither friend 1 nor friend 4 have key 1\nFriend 1 does not have key 2\nFriend 3 has key 4",
+			"output": "4"
+		}
+	],
+	"point_value": 7
+}

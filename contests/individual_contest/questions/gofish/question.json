@@ -1,0 +1,26 @@
+{
+        "name": "Go Fish",
+        "short_name": "gofish",
+        "content": "You're responsible for keeping track of the score of a game of \"go fish\" between two friends, Alice and Bob. Each player has some cards and you need to find who has the most pairs and how many pairs they have.",
+        "input": "The first line contains two space-separated integers, a and b, the number of cards that Alice and Bob have respectively (1 ≤ a, b ≤ 500). The following line contains a space-separated values, each representing one of Alice's cards. The next line contains b space-separated values, each representing one of Bob's cards. For cards that occur more than twice, the number of pairs of that card is determined by the maximum number of pairs that it can be split into (for example, 4 of the same card yields 2 pairs, 9 of the same card yields 4 pairs, etc.)",
+        "output": "Output \"x wins with y pairs\", where x is the player with more pairs, and y is the number of pairs that the winning player has. It is guaranteed that the two players will not tie.",
+        "test_cases": [
+                {
+                        "input": "tc1.in",
+                        "output": "tc1.out",
+                        "percent_value": 0
+                },
+                {
+                        "input": "tc2.in",
+                        "output": "tc2.out",
+                        "percent_value": 100
+                }
+        ],
+        "sample_test_cases": [
+                {
+                        "input": "15 17\n2 4 9 8 A 6 Q Q Q K 6 2 10 10 5\nJ 10 5 3 3 7 5 K A 4 J Q 8 8 8 8 8",
+                        "output": "Bob wins with 5 pairs"
+                }
+        ],
+        "point_value": 5
+}

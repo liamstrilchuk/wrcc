@@ -1,0 +1,11 @@
+9 10
+x = x + 7;
+liamIsANerd = x * 5;
+liamIsANerd = liamIsANerd * 4 + x * 2;
+repeat 14: 
+    x = x + 1; 
+    if liamIsANerd < 500: 
+        liamIsANerd = liamIsANerd * 2;
+        x = x + 7;
+    end if;
+end repeat;

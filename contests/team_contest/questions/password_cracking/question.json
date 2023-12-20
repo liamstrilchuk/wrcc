@@ -1,0 +1,26 @@
+{
+        "name": "Password Cracking",
+        "short_name": "password_cracking",
+        "content": "Before long, you come across a locked door. The door says that it needs a password, but fortunately you helped to design this type of door, so you know what a valid password looks like:<ul><li>The first ten characters are letters (all lowercase). In a valid password, there is exactly one letter that repeats three times in a row, and exactly one letter that repeats two times in a row. No other letters repeat more than once in a row. In a valid password, no letter repeats four or more times in a row.</li><li>The next character is the last digit (the ones digit) of the sum of the previous letters. For example, if the letters are \"abcdefghij\", the sum will be 1+2+3+4+5+6+7+8+9+10=55, so the checksum digit will be 5.</li></ul>",
+        "input": "The first line will consist of one integer, n, the number of passwords that will follow (1 ≤ n ≤ 1000). Each of the following n lines will contain a password.",
+        "output": "The output will consist of one integer: the sum of the ones digit of the checksum of all valid passwords.",
+        "test_cases": [
+                {
+                        "input": "tc1.in",
+                        "output": "tc1.out",
+                        "percent_value": 0
+                },
+                {
+                        "input": "tc2.in",
+                        "output": "tc2.out",
+                        "percent_value": 100
+                }
+        ],
+        "sample_test_cases": [
+                {
+                        "input": "6\naacdefghij4\naaabcdyfgg7\naabbbcczyx9\nhello36\nplkkiooopd4\ntrmmmrrqaz3",
+                        "output": "11"
+                }
+        ],
+        "point_value": 7
+}

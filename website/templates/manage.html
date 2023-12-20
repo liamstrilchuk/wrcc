@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block body %}
+	<a href="/" id="backToContest">&larr; Back to main page</a><br>
+	<a href="/create-user">Create user</a> &bull; <a href="/create-team">Create team</a> &bull; <a href="/adminlog">View admin log</a> &bull; <a href="/current-submissions">Recent submissions</a> &bull; <a href="/request-rate">Request rate</a> &bull; <a href="/leaderboard">Leaderboard</a>
+	<div style="display: flex;">
+		<div>
+			<h2>User list</h2>
+			<table>
+				<tr>
+					<th>Username</th>
+					<th>Admin</th>
+				</tr>
+				{% for user in users %}
+					<tr>
+						<td><a href="/user/{{ user.username }}">{{ user.username }}</a></td>
+						{% if user.is_admin %}<td>Yes</td>{% else %}<td>No</td>{% endif %}
+					</tr>{% endfor %}
+			</table>
+		</div>
+		<div style="margin-left: 100px;">
+			<h2>Team list</h2>
+			<table>
+				<tr>
+					<th>Team name</th>
+					<th>Team members</th>
+				</tr>
+				{% for team in teams %}
+					<tr>
+						<td>{{ team.name }}</td>
+						<td>
+							<ul>
+								{% for member in team.members %}<li>{{ member.username }}</li>{% endfor %}
+							</ul>
+						</td>
+					</tr>{% endfor %}
+			</table>
+		</div>
+	</div>
+{% endblock %}

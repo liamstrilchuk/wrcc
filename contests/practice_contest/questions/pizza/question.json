@@ -1,0 +1,26 @@
+{
+	"name": "Pizza",
+	"short_name": "pizza",
+	"content": "As the owner of a pizza restaurant, you must make pizzas as fast as possible to satisfy your hungry customers. You can cook as many pizzas simultaneously as you have ovens available.",
+	"input": "The first line of input will consist of four integers: n (1 ≤ n ≤ 1000), the number of customers; s (1 ≤ s ≤ 20), the number of slices on a pizza; o (1 ≤ o ≤ 100), the number of ovens you have available; and t (1 ≤ t ≤ 100), the time in minutes it takes to cook one pizza. Each of the following n lines will contain an integer, i (1 ≤ i ≤ 100), the number of slides that customer wants, and a string, p, the type of pizza that customer wants. p will only have lowercase letters.",
+	"output": "Output one integer: the minimum number of minutes it will take to cook pizzas for all customers.",
+	"test_cases": [
+		{
+			"input": "tc1.in",
+			"output": "tc1.out",
+			"percent_value": 0
+		},
+		{
+			"input": "tc2.in",
+			"output": "tc2.out",
+			"percent_value": 100
+		}
+	],
+	"sample_test_cases": [
+		{
+			"input": "5 6 2 3\n3 cheese\n4 pepperoni\n8 vegetarian\n2 cheese\n2 pepperoni",
+			"output": "6"
+		}
+	],
+	"point_value": 6
+}

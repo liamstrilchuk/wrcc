@@ -1,0 +1,26 @@
+{
+	"name": "Mixing Tonics",
+	"short_name": "mixingtonics",
+	"content": "Ronak swings open the door to a chemistry lab, and suddenly the door locks and he is trapped inside. The only way he can get out is to fill a large tank with acid to a specified volume to erode part of the wall. The tank essentially has infinite volume, and he can add acid into it by extracting from a 500L beaker, currently half full of pure acid. There are 4 different operations Ronak can perform on the beaker: dilute, acidize, neutralize, and extract. Each operation is described below:<ul><li>Dilute: Adds 100 liters of pure water to the beaker.</li><li>Acidize: Adds 50 liters of pure acid to the beaker.</li><li>Neutralize: Discards half the beaker and replaces said half with pure water.</li><li>Extract: Drains 10% of the beaker’s volume. From this 10%, all the water is discarded and the pure acid that remains is added to the massive acid tank.</li></ul>At the end of each operation, Ronak does the following:<ol><li>Thoroughly mixes the contents in the beaker so the distribution of acid is uniform throughout the beaker.</li><li>If the amount of contents in the beaker is more than 500 liters, he drains all the excess contents to leave him with exactly 500 liters—the maximum safe amount of liquid the beaker can hold without breaking.</li></ol>Build a program to help Ronak determine the amount of acid that should be in the tank at the end of the process.",
+	"input": "The first line consists of one integer n, the number of operations that follow (1 ≤ n ≤ 50). The following n lines will each contain either <code>Dilute</code>, <code>Acidize</code>, <code>Neutralize</code>, or <code>Extract</code>.",
+	"output": "The amount of liters of acid in the tank after all operations are performed, rounded to the nearest integer.",
+	"test_cases": [
+		{
+			"input": "tc1.in",
+			"output": "tc1.out",
+			"percent_value": 0
+		},
+		{
+			"input": "tc2.in",
+			"output": "tc2.out",
+			"percent_value": 100
+		}
+	],
+	"sample_test_cases": [
+		{
+			"input": "10\nAcidize\nAcidize\nExtract\nNeutralize\nDilute\nNeutralize\nDilute\nAcidize\nAcidize\nExtract",
+			"output": "50"
+		}
+	],
+	"point_value": 5
+}

@@ -1,0 +1,26 @@
+{
+	"name": "Battleship",
+	"short_name": "battleship",
+	"content": "You are currently playing Battleship against your friend, and you just sunk their second-to-last ship, congratulations! Now you must sink their last ship to win the game. You know the length of the remaining ship and the coordinates you have previously shot at and did not hit this ship.<br><br>Battleship is a game played on a square grid where you and your opponent take turns at shooting coordinates. x coordinates are represented by numbers and y coordinates are represented by letters. For example, a 10x10 grid would look like this:<pre>  1 2 3 4 5 6 7 8 9 10\nA # # # # # # # # # #\nB # # # # # # # # # #\nC # # # # # # # # # #\nD # # # # # # # # # #\nE # # # # # # # # # #\nF # # # # # # # # # #\nG # # # # # # # # # #\nH # # # # # # # # # #\nI # # # # # # # # # #\nJ # # # # # # # # # #</pre>E2, for example, would be the square in the fifth row and second column. Your opponent’s ship is a horizontal or vertical set of adjacent tiles that all your previous hits missed.",
+	"input": "The first line contains three integers: the length of the ship L (2 ≤ L ≤ 5), the side length of the grid D (2 ≤ D ≤ 10) and the number of shots you’ve fired (1 ≤ S ≤ 99). The next S lines contain one string each: the coordinates of each hit. Coordinates are given by a letter from A to J followed by a number between 1 and 10.",
+	"output": "The output will consist of a letter followed by an integer: the optimal spot to hit in order to maximize your chance of hitting the opponent’s ship. This spot will always exist and will always be unique.",
+	"test_cases": [
+		{
+			"input": "tc1.in",
+			"output": "tc1.out",
+			"percent_value": 0
+		},
+		{
+			"input": "tc2.in",
+			"output": "tc2.out",
+			"percent_value": 100
+		}
+	],
+	"sample_test_cases": [
+		{
+			"input": "4 5 8\nA1\nA3\nC1\nC3\nC5\nD3\nD4\nE3",
+			"output": "B2"
+		}
+	],
+	"point_value": 7
+}

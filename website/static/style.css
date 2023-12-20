@@ -1,0 +1,101 @@
+body {
+	margin: 0;
+	font-family: sans-serif;
+}
+
+#container {
+	padding: 50px;
+}
+
+#navbar {
+	background-color: #333;
+	color: #fff;
+	padding: 0 50px;
+	height: 50px;
+	display: flex;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+	box-sizing: border-box;
+}
+
+#navbar a {
+	color: #fff;
+	text-decoration: none;
+	margin: 5px;
+}
+
+.contest {
+	padding: 15px;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	margin-bottom: 10px;
+}
+
+.contest-name {
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+.question {
+	padding: 15px;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	margin-bottom: 10px;
+}
+
+tr:nth-child(even) {
+	background-color: #f1f1f1;
+}
+
+tr:nth-child(odd) {
+	background-color: #e2e2e2;
+}
+
+td, th {
+	padding: 8px 12px;
+	text-align: left;
+}
+
+#backToContest {
+	display: block;
+	margin-top: 10px;
+	color: grey;
+}
+
+#submissionCode {
+	background: #ddd;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+.loginContainer {
+	display: flex;
+	justify-content: center;
+}
+
+.loginContainer * {
+	display: block;
+	margin-bottom: 5px;
+}
+
+pre {
+	background: #eee;
+	padding: 10px;
+	border-radius: 3px;
+	font-size: 1.1em;
+}
+
+td ul {
+	margin: 0;
+}
+
+code {
+	font-size: 1.1em;
+	background: #eee;
+	padding: 3px 5px;
+}

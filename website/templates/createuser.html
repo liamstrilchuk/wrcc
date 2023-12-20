@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block body %}
+	<a href="/manage" id="backToContest">&larr; Back to admin management</a>
+	<form method="post">
+		<label for="username">Username</label><br>
+		<input type="text" name="username" placeholder="Enter username"><br>
+		<label for="password">Password</label><br>
+		<input type="password" name="password" placeholder="Enter password"><br>
+		<label for="is_admin">Admin</label>
+		<input type="checkbox" name="is_admin"><br>
+		<input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+		<button type="submit" class="btn btn-default">Submit</button>
+	</form>
+{% endblock %}

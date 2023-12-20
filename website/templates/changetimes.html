@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block head %}
+	<script>
+		window.startDate = new Date(Number("{{ start_date }}") * 1000);
+		window.endDate = new Date(Number("{{ end_date }}") * 1000);
+
+		let start, end;
+
+		window.addEventListener("load", () => {
+			start = document.querySelector("input[name=start]");
+			end = document.querySelector("input[name=end]");
+			start.value = formatDate(startDate);
+			end.value = formatDate(endDate);
+		});
+
+		async function submitForm() {
+			const startDate = new Date(start.value);
+			const endDate = new Date(end.value);
+			const s = Math.floor(startDate.getTime() / 1000);
+			const e = Math.floor(endDate.getTime() / 1000);
+			await fetch(location.pathname, {
+				method: "post",
+				headers: {
+					"Accept": "application/json",
+					"Content-Type": "application/json",
+					"X-CSRF-TOKEN": "{{ csrf_token() }}"
+				},
+				body: JSON.stringify({ start_date: s, end_date: e })
+			});
+			location.pathname = "/";
+		}
+	</script>
+{% endblock %}
+
+{% block body %}
+	<form>
+		<h1>Change contest times</h1>
+		<label for="start">Start date</label><br>
+		<input type="text" name="start"><br>
+		<label for="end">End date</label><br>
+		<input type="text" name="end"><br>
+		<input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+	</form>
+	<button onclick="submitForm()">Submit</button>
+{% endblock %}

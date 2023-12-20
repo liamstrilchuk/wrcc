@@ -1,0 +1,31 @@
+{
+	"name": "Language",
+	"short_name": "language",
+	"content": "You have been tasked with creating an interpreter for a new programming language, BadScript. BadScript is a very simple language: it has no functions and limited features. The purpose of a BadScript program is to make changes to a variable, x, and after the program is complete it prints out the final value of x. For example, take these programs:<pre>repeat 10:\n  if x < 30:\n    x = x * 2;\n  end if;\nend repeat;</pre><pre>second_variable = (12 + 3) * 2;\nif second_variable == 30:\n  x = x + second_variable;\nend if;</pre>If the initial value of x was 5 in both cases, the final results would be 40 and 35 respectively.<br><br>BadScript is very flexible when it comes to whitespace; for example, these are valid arrangements of the scripts above:<pre>repeat 10 :if x   < 30 :x=x*2; end if;end repeat ;</pre><pre>second_variable=(12+3)*2;if second_variable== 30:\nx= x+second_variable; end if;</pre>There are three types of operations in BadScript:<ul><li>Variable assignment takes the form <code>variable_name = statement;</code>. The variable name is a string of characters; valid variable names contain only letters (uppercase and lowercase) and underscores.</li><li>Conditionals take the form <code>if statement op statement: &lt;code&gt; end if;</code>, where op is one of <code>&lt;</code> (less than), <code>&gt;</code> (greater than), or <code>==</code> (equal to). The code inside the if condition is only executed if the condition is true.</li><li>Loops take the form <code>repeat n: &lt;code&gt; end repeat;</code> where n is an integer, the number of times to repeat the code inside (0 ≤ n ≤ 100).</li></ul>A statement is a mathematical expression consisting of integers, variables, brackets, and the four main operations (addition (+), subtraction (-), multiplication (*), and division (/)). The order of operations is:<ul><li>Operations in brackets</li><li>Multiplication and division have the same precedence</li><li>Addition and subtraction have the same precedence</li></ul>BadScript uses integer division (after dividing, the result is rounded down to the nearest integer). For example, if <code>variable_name=5</code>:<pre>(variable_name + 2)/2\n= 3\n8*variable_name + 10\n= 50\n1+2+3+(variable_name - 6)\n= 5</pre>",
+	"input": "The first line of input will consist of two integers: x, x's initial value (-105 ≤ x ≤ 105), and n, the length of the program in lines (1 ≤ n ≤ 100). It is guaranteed that the total length of the BadScript program will not exceed 2000 characters, and that the program is valid (follows the rules above). There will be no nested repeat operations, though there may be nested conditionals and repeats inside conditionals.",
+	"output": "Output one integer: the value of x after the program is run.",
+	"test_cases": [
+		{
+			"input": "tc1.in",
+			"output": "tc1.out",
+			"percent_value": 0
+		},
+		{
+			"input": "tc2.in",
+			"output": "tc2.out",
+			"percent_value": 0
+		},
+		{
+			"input": "tc3.in",
+			"output": "tc3.out",
+			"percent_value": 100
+		}
+	],
+	"sample_test_cases": [
+		{
+			"input": "5 2\nsecond_variable=(12+3)*2;if second_variable== 30:\nx= x+second_variable; end if;",
+			"output": "35"
+		}
+	],
+	"point_value": 15
+}

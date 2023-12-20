@@ -1,0 +1,36 @@
+{
+	"name": "Laser Maze",
+	"short_name": "lasermaze",
+	"content": "You've gotten stuck in a room with lasers pointing everywhere! You know that these are super-powerful lasers and touching a single one is deadly. All lasers extend from a point on a wall to another wall. You need to determine the number of tiles that are safe to walk on. The locations of the lasers are given by their start and end points. Coordinates are given with (0, 0) at the top left corner, with positive x in the east direction and positive y in the south direction.<br><br>For example, if the room's width is 10 and the height is 5, with lasers from (1, 0) to (1, 4), (0, 3) to (9, 3), and (8, 4) to (4, 0), the room would look like this, where X represents the lasers:<pre>.X..X.....\n.X...X....\n.X....X...\nXXXXXXXXXX\n.X......X.</pre>In this example, we can count the number of safe tiles to be 32.",
+	"input": "The first line of input will consist of three integers, n, w, and h (1 ≤ n ≤ 1000, 4 ≤ w ≤ 10<sup>5</sup>, 4 ≤ h ≤ 10<sup>5</sup>). n is the number of lasers, and w and h are the width and height of the room in tiles respectively. Each of the following n lines contain two coordinates, (x<sub>1</sub>, y<sub>1</sub>) and (x<sub>2</sub>, y<sub>2</sub>), the starting and ending point of the laser. For 6 of the possible 15 points, w ≤ 100 and h ≤ 100. It is guaranteed that all diagonal lasers have a slope of ±1.",
+	"output": "Output a single integer: the number of tiles which are safe.",
+	"test_cases": [
+		{
+			"input": "tc1.in",
+			"output": "tc1.out",
+			"percent_value": 0
+		},
+		{
+			"input": "tc2.in",
+			"output": "tc2.out",
+			"percent_value": 40
+		},
+		{
+			"input": "tc3.in",
+			"output": "tc3.out",
+			"percent_value": 0
+		},
+		{
+			"input": "tc4.in",
+			"output": "tc4.out",
+			"percent_value": 60
+		}
+	],
+	"sample_test_cases": [
+		{
+			"input": "3 10 5\n1 0 1 4\n0 3 9 3\n8 4 4 0",
+			"output": "32"
+		}
+	],
+	"point_value": 15
+}

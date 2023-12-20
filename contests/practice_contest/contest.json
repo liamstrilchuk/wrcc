@@ -1,0 +1,10 @@
+{
+	"name": "Practice Contest",
+	"questions": [
+		"rock_paper_scissors",
+		"pizza",
+		"space_battle",
+		"math_homework",
+		"escaping_the_labyrinth"
+	]
+}

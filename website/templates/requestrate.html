@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block head %}
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+{% endblock%}
+
+{% block body %}
+	<a href="/manage" id="backToContest">&larr; Back to admin management</a>
+	<h1>Requests per minute, last hour</h1>
+	<div style="width: 800px;"><canvas id="requests"></canvas></div>
+	{% for item in rpm|reverse %}
+		<b>{{ item }}</b><br>
+		<ul>
+			{% for user in rpm[item] %}
+				<li>{{ user }}: {{ rpm[item][user] }} requests</li>
+			{% endfor %}
+		</ul>
+	{% endfor %}
+	<script>
+		eval(`window.requestData = {
+			{% for item in rpm %}"{{ item }}": {{ rpm[item]["total"] }},
+			{% endfor %}
+		}`);
+		const data = [];
+
+		for (let i = 60; i > -1; i--) {
+			const time = new Date(new Date().getTime() - 1000 * 60 * i);
+			const str = time.toJSON().substring(0,16).replaceAll(/[:\-T]/g, "");
+			data.push([str in window.requestData ? window.requestData[str] : 0, str]);
+		}
+
+		new Chart(
+			document.getElementById("requests"),
+			{
+				type: "line",
+				data: {
+					labels: data.map(e => e[1].substring(e[1].length - 4)),
+					datasets: [
+						{
+							label: "Requests",
+							data: data.map(e => e[0])
+						}
+					]
+				}
+			}
+		);
+	</script>
+{% endblock %}

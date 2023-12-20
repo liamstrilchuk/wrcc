@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block body %}
+	<a href="/manage" id="backToContest">&larr; Back to admin management</a>
+	<h1>Submissions, last 10 minutes ({{ submissions|length }})</h1>
+	{% for item in submissions|reverse %}
+		<div style="background: #eee; padding: 5px 15px; border-radius: 8px; margin-bottom: 10px;">
+			<span>Submission at</span>
+			<span class="itemTime">{{ item["submitted_time"] }}</span>
+			<span>&bull; Status: {{ item["status"] }}</span><br>
+			<ul>
+				{% for tc in item["testcases"] %}
+					<li>Test case {{ loop.index }}: {{ tc["status"] }}
+						{% if tc["stderr"] %}
+							<ul>
+								<li>{{ tc["stderr"] }}</li>
+							</ul>
+						{% endif %}
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+	{% endfor %}
+	{% if submissions|length == 0 %}
+		<p>There have been no submissions in the previous 10 minutes.</p>
+	{% endif %}
+	<script>
+		[...document.getElementsByClassName("itemTime")].forEach(e => {
+			e.innerText = formatDate(new Date(Number(e.innerText) * 1000));
+		});
+	</script>
+{% endblock %}

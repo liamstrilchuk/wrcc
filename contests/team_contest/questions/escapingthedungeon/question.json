@@ -1,0 +1,31 @@
+{
+	"name": "Escaping the Dungeon",
+	"short_name": "escapingthedungeon",
+	"content": "Oh no! You've gotten lost in a dungeon, and the only way out is to navigate through a complex network of interconnected rooms. The dungeon consists of multiple rooms, with some paths connecting them. Paths are all one-way, going from the first to second rooms. Each room has an id, a string of between one and three lowercase letters. Your mission is to determine how many rooms eventually lead to the exit.",
+	"input": "The first line of input consists of an integer, n, and the start and end room ids. n is the number of paths (1 ≤ n ≤ 1000). Each of the following n lines of input each consist of two room ids. ",
+	"output": "Output the total number of rooms that eventually lead to the exit, not including the exit room itself.",
+	"test_cases": [
+		{
+			"input": "tc1.in",
+			"output": "tc1.out",
+			"percent_value": 0
+		},
+		{
+			"input": "tc2.in",
+			"output": "tc2.out",
+			"percent_value": 0
+		},
+		{
+			"input": "tc3.in",
+			"output": "tc3.out",
+			"percent_value": 100
+		}
+	],
+	"sample_test_cases": [
+		{
+			"input": "6 d\na b\nb c\nc d\na e\ne f\nf e",
+			"output": "3"
+		}
+	],
+	"point_value": 7
+}

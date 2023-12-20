@@ -1,0 +1,26 @@
+{
+	"name": "Vacation",
+	"short_name": "vacation",
+	"content": "For the first time in years, you decide to step outside and travel. However, you forgot how expensive the world has gotten. Your task is to create an algorithm to determine the cheapest route. You are only willing to spend a certain amount of time on planes and have a maximum number of flights.",
+	"input": "The first line of input consists of five integers: a (0 ≤ a ≤ 10<sup>5</sup>), the starting position; b (0 ≤ b ≤ 10<sup>5</sup>), the target destination; n (0 ≤ n ≤ 100), the number of available flights; j (0 ≤ j ≤ 10<sup>5</sup>), the maximum time spent on planes in total; and k (0 ≤ k ≤ 2000), the maximum number of flights you are willing to have. The next n lines consist of four integers: the starting point, the destination, the cost, and the duration in minutes.",
+	"output": "Print the cost and the time of the least expensive path. If there are multiple solutions with the same cost, output the one with the lowest time. If there is no possible solution, output -1.",
+	"test_cases": [
+		{
+			"input": "tc1.in",
+			"output": "tc1.out",
+			"percent_value": 0
+		},
+		{
+			"input": "tc2.in",
+			"output": "tc2.out",
+			"percent_value": 100
+		}
+	],
+	"sample_test_cases": [
+		{
+			"input": "3 0 5 600 2\n3 5 50 10\n5 2 400 50\n2 0 500 100\n5 0 1000 500\n4 2 2 5",
+			"output": "1050 510"
+		}
+	],
+	"point_value": 10
+}

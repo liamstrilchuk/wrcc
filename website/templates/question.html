@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %}{{ question.name }} - Waterloo Region Computing Contest{% endblock %}
+
+{% block body %}
+	<a href="/contest/{{ metadata.short_name }}" id="backToContest">&larr; Back to contest</a>
+	<h1>{{ question.name }}</h1>
+	<p>{{ question.content|safe }}</p>
+	<h2>Input</h2>
+	<p>{{ question.input|safe }}</p>
+	<h2>Output</h2>
+	<p>{{ question.output|safe }}</p>
+	<h2>Sample test cases</h2>
+	{% for tc in question.sample_test_cases %}
+		<h3>Input</h3>
+		<pre>{{ tc.input }}</pre>
+		<h3>Output</h3>
+		<pre>{{ tc.output }}</pre>
+	{% endfor %}
+	<h2>Before submitting</h2>
+	<ul>
+		<li>Make sure your solution works with the sample test case</li>
+		<li>Outputs are case sensitive - which letters are uppercase and lowercase matter</li>
+		<li>We suggest using <a href="https://ide.judge0.com/" target="_blank">judge0's IDE</a> to write your code; other compilers may not be using the same version as the grader</li>
+	</ul>
+	<h2>Submit solution</h2>
+	<form method="post" enctype="multipart/form-data">
+		<input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+		<label for="solution">Upload file:</label>
+		<input type="file" name="solution"><br>
+		<label for="language">Language:</label>
+		<select name="language">
+			<option value="c">C (GCC 9.2.0)</option>
+			<option value="cpp">C++ (GCC 9.2.0)</option>
+			<option value="java">Java (OpenJDK 13.0.1)</option>
+			<option value="javascript">Javascript (Node.js 12.14.0)</option>
+			<option value="py">Python (3.8.1)</option>
+		</select><br>
+		<input type="submit" value="Submit">
+		{% if error %}
+			<p style="color: red;">{{ error }}</p>
+		{% endif %}
+	</form>
+{% endblock %}

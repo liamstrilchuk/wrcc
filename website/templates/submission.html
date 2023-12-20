@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block head %}
+	<script src="{{ url_for('static', filename='submission.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+	<pre id="submissionCode" style="white-space: pre-wrap;"></pre>
+{% endblock %}

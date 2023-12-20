@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block title %}Waterloo Region Computing Contest{% endblock %}
+
+{% block head %}
+	<script src="{{ url_for('static', filename='index.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+	<h1>Contests</h1>
+	<div id="contestContainer"></div>
+	<h1>Information</h1>
+	<h2>Allowed websites</h2>
+	<ul>
+		<li>Documentation:
+			<ul>
+				<li><a href="https://www.gnu.org/software/gnu-c-manual/gnu-c-manual.html" target="_blank">C</a></li>
+				<li><a href="https://cplusplus.com/doc/" target="_blank">C++</a></li>
+				<li><a href="https://docs.oracle.com/en/java/index.html" target="_blank">Java</a></li>
+				<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">JavaScript</a></li>
+				<li><a href="https://docs.python.org/3/" target="_blank">Python</a></li>
+			</ul>
+		</li>
+		<li>Other:
+			<ul>
+				<li><a href="https://www.w3schools.com/" target="_blank">W3Schools</a></li>
+				<li><a href="https://regex101.com" target="_blank">Regex101</a></li>
+				<li>You may use the code editor of your choice, including <a href="https://ide.judge0.com/" target="_blank">Judge0</a> or <a href="https://replit.com" target="_blank">Replit</a></li>
+			</ul>
+		</li>
+	</ul>
+	<h2>Language-specific</h2>
+	<ul>
+		<li>Java: You must have a class named "Main" in your file; otherwise, you will get a compilation error. A valid Java program looks like:
+<pre>
+public class Main {
+	public static void main(String[] args) {
+		// your code here
+	}
+}
+</pre>
+		</li>
+		<li>JavaScript: Since we use Node.js to mark JavaScript submissions, the <code>prompt()</code> function does not work. Instead, use the following format (or something similar):
+		<pre>const readline = require("readline");
+const rl = readline.createInterface({
+	input: process.stdin,
+	output: process.stdout
+});
+
+let lines = [];
+
+const start = async () => {
+	for await (const line of rl) {
+		lines.push(line);
+	}
+	// your code here
+}
+start();
+</pre></li>
+	</ul>
+{% endblock %}

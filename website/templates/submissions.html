@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block body %}
+	<h1>Contest submissions</h1>
+	<table>
+		<tr>
+			<th>id</th>
+			<th>Question</th>
+			<th>User</th>
+			<th>Date</th>
+			<th>% earned</th>
+			<th>Status</th>
+			<th>Verdict</th>
+			<th>Code</th>
+		</tr>
+		{% for s in submissions %}
+			<tr>
+				<td>{{ s.submission.id }}</td>
+				<td>{{ s.submission.question }}</td>
+				<td>{{ s.user }}</td>
+				<td class="timestamp">{{ s.submission.timestamp }}</td>
+				<td>{{ s.submission.percent_earned }}</td>
+				<td>{{ s.submission.status }}</td>
+				<td>{{ s.submission.verdict }}</td>
+				<td><a href="/submission/{{ s.submission.id }}">View</a> ({{ s.submission.language }})</td>
+			</tr>
+		{% endfor %}
+	</table>
+	<script>
+		[...document.getElementsByClassName("timestamp")].forEach(e => {
+			e.innerHTML = formatDate(new Date(Number(e.innerHTML) * 1000));
+		});
+	</script>
+{% endblock %}

@@ -1,0 +1,26 @@
+{
+        "name": "Tic-Tac-Toe",
+        "short_name": "tictactoe",
+        "content": "Given a tic-tac-toe board, output whether or not a player can win on their next turn. Players alternate between placing tiles on a 3-by-3 grid and the first player that creates a full row, column, or diagonal with their symbol wins.",
+        "input": "The first line contains one integer, t, the number of test cases (1 ≤ t ≤ 100). For each test case, the first three lines will consist of a row of the tic-tac-toe board, where \".\" is an empty space. The next line in each test case will be either \"x to move\" or \"o to move\". It is guaranteed that the board is not already won by either player.",
+        "output": "For each test case, output \"x can win\" if it is x to move and they can win on their next turn. Output \"o can win\" if it is o to move and they can win on their next turn. If the player moving next cannot immediately win on their turn, output \"no winning move\" (all lowercase).",
+        "test_cases": [
+                {
+                        "input": "tc1.in",
+                        "output": "tc1.out",
+                        "percent_value": 0
+                },
+                {
+                        "input": "tc2.in",
+                        "output": "tc2.out",
+                        "percent_value": 100
+                }
+        ],
+        "sample_test_cases": [
+                {
+                        "input": "2\nxoo\no.x\nx.x\nx to move\n..o\n...\nxo.\no to move",
+                        "output": "x can win\nno winning move"
+                }
+        ],
+        "point_value": 6
+}

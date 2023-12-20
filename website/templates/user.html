@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block body %}
+	<h1>{{ user.username }}</h1>
+	<p>Current team: 
+		{% if current_team %}
+			{{ current_team.name }}
+		{% else %}
+			None
+		{% endif %}
+	</p>
+	<form method="post" action="/change-team/{{ user.username }}">
+		Change team:
+		<select name="teamname">
+			<option value="none">None</option>
+			{% for team in teams %}
+				<option value="{{ team.name }}">{{ team.name }}</option>
+			{% endfor %}
+		</select><br>
+		<input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+		<button type="submit" class="btn btn-default">Submit</button>
+	</form>
+{% endblock %}

@@ -1,0 +1,11 @@
+10 6 10
+Friend 5 has key 5
+Friend 9 has key 2
+Friend 6 has key 10
+Friend 2 has key 7
+Friend 1 has key 1
+Friend 8 has key 9
+Neither friend 7 nor friend 10 have key 3
+Friend 3 does not have key 3
+Neither friend 3 not friend 7 have key 4
+Friend 3 does not have key 6

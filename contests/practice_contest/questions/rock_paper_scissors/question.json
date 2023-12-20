@@ -1,0 +1,31 @@
+{
+	"name": "Rock, Paper, Scissors",
+	"short_name": "rock_paper_scissors",
+	"content": "Alice and Bob have decided to play rock, paper, scissors with each other, and now they need your help in tallying their scores! Each round consists of five games, and the person who wins the most games in a round gains one point. If the round is tied, zero points are awarded.",
+	"input": "The first line will consist of one integer, n, the number of rounds played (1 ≤ n ≤ 500). The following 5n lines will each consist of two letters, what Alice and Bob played in that game respectively (R = rock, P = paper, S = scissors). Rock wins against scissors, paper wins against rock, and scissors wins against paper.",
+	"output": "The output will consist of two values: which player won (A or B), and by what margin. If the scores are tied, output \"TIE\" (all uppercase).",
+	"test_cases": [
+		{
+			"input": "tc1.in",
+			"output": "tc1.out",
+			"percent_value": 0
+		},
+		{
+			"input": "tc2.in",
+			"output": "tc2.out",
+			"percent_value": 0
+		},
+		{
+			"input": "tc3.in",
+			"output": "tc3.out",
+			"percent_value": 100
+		}
+	],
+	"sample_test_cases": [
+		{
+			"input": "2\nR S\nP S\nS P\nP R\nR S\nP P\nR S\nS S\nR P\nR R",
+			"output": "A 1"
+		}
+	],
+	"point_value": 5
+}

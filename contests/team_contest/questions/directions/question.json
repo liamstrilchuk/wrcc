@@ -1,0 +1,26 @@
+{
+	"name": "Directions",
+	"short_name": "directions",
+	"content": "While travelling to your friend's house, your phone died and now you don't know how to get there! You do know the address, so you ask someone for directions. You now need to follow the directions they gave you to get to your friend's house.",
+	"input": "The first line of input will consist of four integers: w, h, the width and height of the map respectively (4 ≤ w, h ≤ 100); n, the number of directions (1 ≤ n ≤ 100); and d, the direction you are currently facing (0 = north, 1 = east, 2 = south, 3 = west). Each of the following h lines will consist of w characters, each representing a tile on the map, where H is a house, X is a road, Y is your current position, and . is an empty space.",
+	"output": "Output two integers: the x and y coordinates of your friend's house. The top-left corner of the map is (0, 0), and the x and y coordinates increase when going east and south respectively.",
+	"test_cases": [
+		{
+			"input": "tc1.in",
+			"output": "tc1.out",
+			"percent_value": 0
+		},
+		{
+			"input": "tc2.in",
+			"output": "tc2.out",
+			"percent_value": 100
+		}
+	],
+	"sample_test_cases": [
+		{
+			"input": "10 10 5 3\n.H.X.H.X..\nXXXXXXXXYX\n.X.X..H...\nHX.X.HHHX.\n.X.XXXXXX.\nHXH.HH..XH\n.X..X..HXH\n.XXXXXXXX.\n.XHXHX.XHH\n...X.XHXXX\n2nd road on the left\n1st road on the left\n3rd road on the right\n1st road on the left\n2nd house on the left",
+			"output": "9 8"
+		}
+	],
+	"point_value": 12
+}

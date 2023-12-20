@@ -1,0 +1,26 @@
+{
+	"name": "Nicky's Balancing Act",
+	"short_name": "nickysbalancingact",
+	"content": "Nicky is at the end of her first semester and has two math courses to factor into her average: Advanced Functions (MHF) and Calculus and Vectors (MCV). She has little time left to hand in the remaining assignments for each course and needs your help to determine which projects she should choose to increase her average by the highest amount possible, under the conditions listed below.<ul><li>Nicky must complete exactly 3 projects.</li><li>Nicky must complete at least one project from each class.</li><li>Since Nicky is a good and diligent student, she will, with 100% certainty, obtain the amount of points the project is worth upon completion.</li><li>The sum of the amount of minutes of the projects she completes must not exceed 150.</li></ul>Can you help Nicky find the tasks she needs to complete in order to get the most points?",
+	"input": "The first line will consist of one integer, n, the total number of projects across both classes (3 ≤ n ≤ 200). Each of the following n lines will contain three space-separated pieces of information. The first will be a project id, beginning with <code>MHF</code> for Advanced Functions and with <code>MCV</code> for Calculus and Vectors. The next two are integers: the number of points the project is worth, and the time the project takes to complete in minutes.",
+	"output": "The optimal choice of projects that Nicky should choose, starting with MCV projects and ending with MHF projects, sorted by the project's id number from lowest to highest.",
+	"test_cases": [
+		{
+			"input": "tc1.in",
+			"output": "tc1.out",
+			"percent_value": 0
+		},
+		{
+			"input": "tc2.in",
+			"output": "tc2.out",
+			"percent_value": 100
+		}
+	],
+	"sample_test_cases": [
+		{
+			"input": "6\nMHF1 45 80\nMHF2 32 61\nMHF3 6 1\nMCV1 10 5\nMCV2 16 20\nMCV3 55 79",
+			"output": "MCV1\nMCV3\nMHF2"
+		}
+	],
+	"point_value": 10
+}

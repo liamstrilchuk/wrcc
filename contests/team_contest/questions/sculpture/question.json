@@ -1,0 +1,26 @@
+{
+	"name": "Sculpture",
+	"short_name": "sculpture",
+	"content": "As the director of the Museum of Amazing Cube Sculptures, your job is to review potential sculptures to add to your collection. Each sculpture is three-dimensional and made up of a number of connected cubes, represented by a number of two-dimensional grids, with each grid being a vertical slice of the sculpture. For a sculpture to be plausible, it needs to meet certain criteria:<ul><li>A sculpture must be made of only one piece.</li><li>At least one part of the sculpture must be touching the ground.</li><li>No cube on the sculpture can support more cubes than its material strength allows.</li></ul>For example, consider the following sculptures (each with a width of 9, height of 5, depth of 1, and material strength of 5):<pre>...###...\n...###...\n.#.###...\n.##.##...\n.#.###...</pre>This sculpture is not plausible because it is made of two separate pieces: one with four cubes, and another with fourteen.<pre>...###...\n.#######.\n...####..\n...###...\n.........</pre>This sculpture is not plausible because there is no cube which is touching the ground (the bottom row).<pre>...####..\n.#######.\n##.####..\n.#.#.#...\n...#.#...</pre>This sculpture is not plausible because its material strength cannot support it. The amount of weight each cube is supporting can be illustrated as<pre>...SSSS..  4  total cubes, over 4 supporting cubes = 1\n.#SSSSSS.  14 total cubes, over 6 supporting cubes = 2\n##.SSSS..  18 total cubes, over 4 supporting cubes = 4\n.#.S.S...  20 total cubes, over 2 supporting cubes = 10\n...S.S...  22 total cubes, over 2 supporting cubes = 11</pre>Here, S represents a supporting cube. A supporting cube is a cube that is within one cube (either adjacent or diagonally) from a cube on a lower level that eventually touches the ground. All cubes touching the ground are supporting cubes. To calculate the material load for a level, the total number of blocks it is supporting (either directly or indirectly) is divided (rounding down) by the number of supporting cubes. If any level's material load is greater than the structure's material strength, it is not plausible. Since the maximum material strength for this sculpture is 5, it is not plausible.",
+	"input": "The first line of input consists of one integer, n, the number of sculptures (1 ≤ n ≤ 5). For each sculpture, the first line of input will be four integers: w, h, and d, the width, height, and depth of the sculpture (1 ≤ w, d, h ≤ 10), along with m, its material strength (1 ≤ m ≤ 103). The following input will consist of d slices of h lines, each with w characters. Each character will be . (empty space) or # (part of the sculpture). For 5 of the possible 20 points, depth of all sculptures is 1.",
+	"output": "For each sculpture, output either <code>YES</code> if it is plausible and <code>NO</code> otherwise (all uppercase).",
+	"test_cases": [
+		{
+			"input": "tc1.in",
+			"output": "tc1.out",
+			"percent_value": 0
+		},
+		{
+			"input": "tc2.in",
+			"output": "tc2.out",
+			"percent_value": 100
+		}
+	],
+	"sample_test_cases": [
+		{
+			"input": "2\n9 5 1 11\n...####..\n.#######.\n##.####..\n.#.#.#...\n...#.#...\n8 4 3 16\n..######\n..####.#\n........\n........\n..####..\n..####..\n...##...\n...##...\n#.####..\n#.####..\n##......\n.#......\n",
+			"output": "YES\nNO"
+		}
+	],
+	"point_value": 20
+}

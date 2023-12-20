@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block body %}
+	<a href="/manage" id="backToContest">&larr; Back to admin management</a>
+	<h1>Last 100 actions</h1>
+	<table>
+		<tr>
+			<th>Timestamp</th>
+			<th>Type</th>
+			<th>Description</th>
+		</tr>
+		{% for item in log %}
+			<tr>
+				<td class="itemTime">{{ item.time }}</td>
+				<td>{{ item.type }}</td>
+				<td>{{ item.desc }}</td>
+			</tr>
+		{% endfor %}
+	</table>
+	<script>
+		[...document.getElementsByClassName("itemTime")].forEach(e => {
+			e.innerText = formatDate(new Date(Number(e.innerText) * 1000));
+		});
+	</script>
+{% endblock %}
